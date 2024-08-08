@@ -1,0 +1,13 @@
+<% if current_user %>
+    
+            Gerenciamento Usuário
+        <%= link_to "Novo Post", new_post_path, class:"dropdown-item" %> ActionAnother action
+                <%= link_to "Logout", destroy_user_session_path, data:{turbo_method: :delete} , class: "dropdown-item" %>
+            
+<% else %>
+    
+        <%= link_to "Cadastro", new_user_registration_path, class:"nav-link" %>
+    
+        <%= link_to "Login", new_user_session_path, class:"nav-link" %>
+    
+<% end %>
