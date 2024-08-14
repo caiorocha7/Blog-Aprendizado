@@ -25,13 +25,12 @@ class CommentsController < ApplicationController
         @comment = @post.comments.find(params[:id])
         respond_to do |format|
             if @comment.update(comment_params)
-                format.html{redirect_to post_url(@post), notice: "Comentário atualizado"}
+                format.html{redirect_to post_url(@post), notice:"Comentário atualizado"}
             else
-                format.html{redirect_to post_url(@post), notice: "Erro na atualização"}
+                format.html{redirect_to post_url(@post), alert:"Erro na atualização"}
             end
-        end 
+        end
     end
-
     private
 
     def set_post
