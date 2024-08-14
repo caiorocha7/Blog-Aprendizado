@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class EstudanteController < ApplicationController
     def index
         # @msg = "Estudando o Rails"
         # # render html: "<h2>Olá mundo!</h2>".html_safe
